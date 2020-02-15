@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+
+<div class="container-fluid bottom">
+    <h3>Most influential photos of all time</h3>
+    <hr>
+    <div class="row">
+        <div *ngFor="let card of cards" class=" col-sm-6 col-md-4 col-lg-3" style="margin-top: 30px;"
+            title="Click to Expand!!">
+            <div class="card lesson-border outlay" (click)="open(card)">
+                <h5 class="card-title">{{card.title}}</h5>
+                <img class="card-img-top imgsize" src={{card.url}} alt="Card image">
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,22 @@
+.headings {
+  padding-top: 20px;
+  font-weight: bold;
+  font-family: Helvetica Neue, Helvetica, Arial, Utkal, sans-serif;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+h5 a {
+  color: #bd2130;
+}
+p {
+  width: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, Utkal, sans-serif;
+}
+
+.intro {
+  line-height: 40px;
+}

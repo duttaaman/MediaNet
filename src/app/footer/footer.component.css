@@ -1,0 +1,16 @@
+.footer {
+  background-color: #23272b;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.28;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

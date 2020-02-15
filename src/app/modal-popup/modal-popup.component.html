@@ -1,0 +1,14 @@
+<div class="modal-header">
+	<h4 class="modal-title"> {{card.title}} </h4>
+	<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+<div class="modal-body">
+	<div class="card lesson-border">
+		<img class="card-img-top imgsize" src="{{card.url}}" alt="Card image cap">
+		<div class="card-body">
+			<p class="card-text"><b>Description: </b>{{card.description}}</p>
+		</div>
+	</div>
+</div>
