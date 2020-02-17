@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-custom navbar-expand-lg">
 
-  <div class="container-fluid">
+  <div class="container-fluid float-left"> 
     <div class="row w-100">
 
 
@@ -10,8 +10,12 @@
         <span>MediaNet</span>
       </div>
 
-      <div class="col-10 container-fluid px-2">
-        <div class=" navbar-collapse" [ngClass]="{ 'show': isShown }" id="navbarTogglerDemo03">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" (click)="isShown = !isShown" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="col-10 container-fluid px-2 float-left">
+        <div class="collapse navbar-collapse" [ngClass]="{ 'show': isShown }" id="navbarToggler">
           <ul class="navbar-nav mt-2 mt-lg-0 ">
             <li class="nav-item" [routerLinkActive]="['active']">
               <a class="nav-link" routerLink="/home" (click)="isShown = false">Home</a>
@@ -25,36 +29,39 @@
 
 
 
-            <li *ngIf="currentUser" class="nav-item ">
-              <div class="spacer">
+            <!-- <li *ngIf="currentUser" class="nav-item ">
+              <div *ngIf="currentUser" class="nav-item ">
 
                 <a class="nav-link active">
                   <fa-icon style='color:red;' [icon]="['fas', 'user']"></fa-icon> {{currentUser.userName}}
                 </a>
               </div>
-            </li>
+            </li> -->
 
 
 
           </ul>
+          
         </div>
       </div>
     </div>
   </div>
 
 
+  <div *ngIf="currentUser" class="nav-item collapse navbar-collapse username" [ngClass]="{ 'show': isShown }">
+
+    <a class="nav-link">
+      <fa-icon  [icon]="['fas', 'user']"></fa-icon> {{currentUser.userName}}
+    </a>
+  </div>
 
   <div *ngIf="!currentUser">
-    <a routerLink="/login" class="btn btn-danger btn-sm right">Login</a>
-  </div>
-  <div *ngIf="currentUser">
-    <a class="active spacer"> {{currentUser.userName}}</a>
+    <a routerLink="/login" class="collapse navbar-collapse btn btn-danger btn-sm right float-right" [ngClass]="{ 'show': isShown }">Login</a>
   </div>
 
 
-
   <div *ngIf="currentUser">
-    <a class="btn btn-danger active btn-sm right" (click)="logout()">Logout</a>
+    <a class="collapse navbar-collapse btn btn-danger active btn-sm right float-right" [ngClass]="{ 'show': isShown }" (click)="logout()">Logout</a>
   </div>
 
 </nav>

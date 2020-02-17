@@ -12,6 +12,7 @@ import { User } from '../models';
 })
 export class HeaderComponent implements OnInit {
 
+  isShown:boolean=false;
   currentUser: User;
   
     constructor(

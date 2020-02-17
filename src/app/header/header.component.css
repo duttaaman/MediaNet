@@ -14,9 +14,14 @@ li {
   margin-left: 640px;
 }
 
+.username {
+  color: red;
+  width: 100px;
+}
+
 .toolbar {
   height: 50px;
-  margin: -8px;
+  margin: 4px;
   display: flex;
   align-items: center;
   color: white;
